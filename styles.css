@@ -1,4 +1,4 @@
-/* General Styles */
+* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 /* Header Styles */
 header {
     background: #0e473a; /* Dark green, symbolic in Islamic cultures */
@@ -88,8 +87,7 @@ nav a:hover::before {
     }
 }
 
-
-/* Main Content Styles */
+/* Main Content */
 main {
     padding: 30px;
     max-width: 1200px;
@@ -119,7 +117,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 15px;
     padding: 20px;
-    flex: 1 1 calc(30% - 30px); /* Responsive item for larger screens */
+    flex: 1 1 calc(30% - 30px); /* Responsive item */
     transition: transform 0.3s;
 }
 
@@ -136,22 +134,20 @@ h2 {
     line-height: 1.6;
 }
 
-/* Button Styles */
-.course-button {
-    display: inline-block;
+.course button {
     background-color: #322ffc;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 10px 15px;
-    text-align: center;
-    text-decoration: none; /* Remove underline */
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.course-button:hover {
-    background-color: #1a1aff; /* Slightly darker on hover */
+.course button:hover {
+    background-color: #322ffc;
 }
+
 
 /* Footer Styles */
 footer {
