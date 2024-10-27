@@ -1,72 +1,73 @@
-/* General Styles for About Page */
-main {
-    flex: 1; /* Allow main content to expand */
-    padding: 50px; /* Ample padding for layout */
-    background-color: #f4f4f4; /* Light background color */
+/* Overall container */
+.about-container {
     display: flex;
-    justify-content: center; /* Center the content */
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
 }
 
-.about-section {
-    max-width: 900px; /* Limit width for better readability */
-    background: #fff; /* White background for the section */
-    padding: 40px; /* Ample padding for spacious feel */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
-    text-align: left; /* Align text to the left */
-}
-
-.about-section h2 {
-    color: #007A8E; /* Dark teal for headings */
-    font-size: 2.5em; /* Large heading */
-    text-align: center; /* Center-align the heading */
-    margin-bottom: 30px; /* Space below the heading */
-}
-
+/* Content section */
 .about-content {
-    display: flex; /* Flexbox layout */
-    align-items: flex-start; /* Align items to the start */
+    flex: 2;
+    color: #333;
 }
 
-.profile-image {
-    flex: 1; /* Image takes 1 part */
-    margin-right: 30px; /* Space between image and text */
+/* Right content (image and name) */
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.profile-image img {
-    width: 100%; /* Full width for image */
-    border-radius: 10px; /* Rounded corners for image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
+/* Image styling */
+.about-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4a90e2;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
 }
 
-.about-text {
-    flex: 2; /* Text takes 2 parts */
+/* Name and title styling */
+.right-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a90e2;
+    margin: 0.5rem 0;
 }
 
-.about-text h3 {
-    color: #005A63; /* Darker teal for subheadings */
-    font-size: 1.8em; /* Large subheading */
-    margin-bottom: 15px; /* Space below subheading */
+.about-title {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
 }
 
-.about-text p {
-    color: #333; /* Dark gray for text */
-    font-size: 1.2em; /* Slightly larger text for readability */
-    line-height: 1.6; /* Comfortable line height */
-    margin-bottom: 20px; /* Space between paragraphs */
+/* Description */
+.about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-    }
+/* Call to action button */
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4a90e2;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-    .profile-image {
-        margin-bottom: 20px; /* Add space below image when stacked */
-    }
-
-    .about-section {
-        padding: 20px; /* Reduce padding on smaller screens */
-    }
+.cta-button:hover {
+    background-color: #357abd;
 }
