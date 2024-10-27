@@ -74,6 +74,22 @@ nav a:hover::before {
     width: 100%;
 }
 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 10px 0; /* Less padding for mobile */
+    }
+
+    nav a {
+        margin: 10px 0; /* Adjust margin for stacked items */
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
+
+
 /* Intro Section */
 .intro {
     text-align: center;
