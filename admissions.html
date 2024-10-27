@@ -38,7 +38,7 @@
 <!-- Course Selection Section -->
 <section class="course-selection">
     <h3>Select Your Course</h3>
-    <form id="course-form">
+    <form id="course-form" action="https://www.instagram.com/haroon_al_bahaar_46/" target="_blank">
         <select name="course" id="course-dropdown" required>
             <option value="" disabled selected>Select a course</option>
             <option value="quran-recitation">Quran Recitation with Tajweed</option>
@@ -49,28 +49,6 @@
     </form>
 </section>
 
-<script>
-    document.getElementById('course-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        const selectedCourse = document.getElementById('course-dropdown').value;
-
-        let message = '';
-        if (selectedCourse === 'quran-recitation') {
-            message = 'I would like to enroll in the Quran Recitation with Tajweed course.';
-        } else if (selectedCourse === 'pashto-language') {
-            message = 'I would like to enroll in the Pashto Language course.';
-        } else if (selectedCourse === 'english-language') {
-            message = 'I would like to enroll in the English Language course.';
-        }
-
-        // Instagram message link
-        const instagramUrl = `https://www.instagram.com/haroon_al_bahaar_46/`;
-        const encodedMessage = encodeURIComponent(message);
-        const directMessageUrl = `${instagramUrl}/?text=${encodedMessage}`;
-
-        window.open(directMessageUrl, '_blank'); // Open Instagram direct message
-    });
-</script>
 
 
 
