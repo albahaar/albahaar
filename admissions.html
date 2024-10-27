@@ -35,20 +35,39 @@
             <p>Welcome to Al Bahaar Islamic Academy's admissions page. Our academy offers a variety of courses aimed at empowering students with essential knowledge and skills. Admissions are open year-round. Explore our programs below to find the right course for you.</p>
         </section>
 
-        <!-- Course Selection Section -->
-        <section class="course-selection">
-            <h3>Select Your Course</h3>
-            <form action="enroll.html" method="post"> <a href="enroll.html"></a>
-                <select name="course" id="course-dropdown" required>
-                    <option value="" disabled selected>Select a course</option>
-                    <option value="quran-recitation">Quran Recitation with Tajweed</option>
-                    <option value="pashto-language">Pashto Language Courses</option>
-                    <option value="english-language">English Language Courses</option>
-                    
-                </select>
-                <button type="submit" class="cta-btn">Enroll Now</button>
-            </form>
-        </section>
+       <!-- Course Selection Section -->
+<section class="course-selection">
+    <h3>Select Your Course</h3>
+    <form id="course-form">
+        <select name="course" id="course-dropdown" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="quran-recitation">Quran Recitation with Tajweed</option>
+            <option value="pashto-language">Pashto Language Courses</option>
+            <option value="english-language">English Language Courses</option>
+        </select>
+        <button type="submit" class="cta-btn">Enroll Now</button>
+    </form>
+</section>
+
+<script>
+    document.getElementById('course-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        const selectedCourse = document.getElementById('course-dropdown').value;
+
+        let message = '';
+        if (selectedCourse === 'quran-recitation') {
+            message = 'I would like to enroll in the Quran Recitation with Tajweed course.';
+        } else if (selectedCourse === 'pashto-language') {
+            message = 'I would like to enroll in the Pashto Language course.';
+        } else if (selectedCourse === 'english-language') {
+            message = 'I would like to enroll in the English Language course.';
+        }
+
+        const instagramUrl = `https://www.instagram.com/direct/new/?text=${encodeURIComponent(message)}`;
+        window.open(instagramUrl, '_blank'); // Open Instagram direct message in a new tab
+    });
+</script>
+
 
         <section class="courses">
             <h3>Our Courses</h3>
