@@ -1,4 +1,4 @@
-* General Styles */
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,6 +8,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+/* my Style Header */
 header {
     background: #0e473a; /* Dark green, symbolic in Islamic cultures */
     color: #f9f9f9;
@@ -33,7 +35,7 @@ header p {
     margin-top: 10px;
 }
 
-/* Islamic Style Navigation */
+/* my Style Navigation */
 nav {
     background: #0a3a2f; /* Darker green to complement the header */
     text-align: center;
@@ -70,20 +72,6 @@ nav a:hover::before {
     width: 100%;
 }
 
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        padding: 10px 0; /* Less padding for mobile */
-    }
-
-    nav a {
-        margin: 10px 0; /* Adjust margin for stacked items */
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-}
 
 /* Main Content */
 main {
@@ -136,8 +124,8 @@ h2 {
     background-color: #322ffc;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 12px;
+    border-radius: 4px;
+    padding: 8px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -146,19 +134,12 @@ h2 {
     background-color: #322ffc;
 }
 
-
-/* Footer Styles */
+/* my Style Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #0e473a;
     color: #fff;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
 }
 
 .social-icons a {
@@ -170,7 +151,7 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #00acee; /* Change color for hover effect */
+    color: #00acee; /* You can adjust colors for each platform if desired */
 }
 
 .social-icons a.facebook:hover { color: #3b5998; }
@@ -180,27 +161,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem; /* Smaller header size for mobile */
-    }
-
-    nav {
-        padding: 10px 0; /* Less padding for smaller screens */
-    }
-
-    nav a {
-        margin: 0 10px; /* Reduce margin for mobile */
-        font-size: 1rem; /* Smaller font size */
-    }
-
-    main {
-        padding: 15px; /* Less padding for mobile */
-    }
-
-    h2 {
-        font-size: 1.8rem; /* Smaller title for mobile */
-    }
-
     .course {
         flex: 1 1 calc(100% - 30px); /* Stack courses on smaller screens */
     }
