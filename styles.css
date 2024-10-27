@@ -9,45 +9,44 @@ body {
     min-height: 100vh;
 }
 
-/* my Style Header */
+/* Header Styles */
 header {
-    background: #0e473a; /* Dark green, symbolic in Islamic cultures */
+    background: #0e473a;
     color: #f9f9f9;
-    padding: 30px 0;
+    padding: 20px 0; /* Reduced padding for better mobile spacing */
     text-align: center;
-    border-bottom: 5px solid #f1c40f; /* Golden accent */
-    background-image: url('islamic-pattern.png'); /* You can use a subtle geometric Islamic pattern */
+    border-bottom: 5px solid #f1c40f;
+    background-image: url('islamic-pattern.png');
     background-size: cover;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
-    color: #f1c40f; /* Golden accent */
-    font-family: 'Amiri', serif; /* A classic Arabic-inspired font */
+    font-size: 2.5rem; /* Responsive font size */
+    color: #f1c40f;
+    font-family: 'Amiri', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.4rem;
-    color: #e0e0e0; /* Soft white/grey for subtitle */
+    font-size: 1.2rem; /* Responsive font size */
+    color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
 
-/* my Style Navigation */
+/* Navigation Styles */
 nav {
-    background: #0a3a2f; /* Darker green to complement the header */
+    background: #0a3a2f;
     text-align: center;
-    padding: 15px 0;
-    border-top: 2px solid #f1c40f; /* Golden accent */
+    padding: 10px 0; /* Adjusted padding */
 }
 
 nav a {
     color: #f9f9f9;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem;
+    margin: 0 15px; /* Adjusted margin */
+    font-size: 1rem; /* Responsive font size */
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
@@ -72,10 +71,9 @@ nav a:hover::before {
     width: 100%;
 }
 
-
-/* Main Content */
+/* Main Content Styles */
 main {
-    padding: 30px;
+    padding: 20px; /* Reduced padding for mobile */
     max-width: 1200px;
     margin: 20px auto;
     background: white;
@@ -88,7 +86,7 @@ h2 {
     color: #0a3a2f;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Responsive font size */
 }
 
 .course-list {
@@ -102,8 +100,8 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    padding: 20px;
-    flex: 1 1 calc(30% - 30px); /* Responsive item */
+    padding: 15px; /* Reduced padding for mobile */
+    flex: 1 1 calc(30% - 30px);
     transition: transform 0.3s;
 }
 
@@ -125,7 +123,7 @@ h2 {
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 8px 10px;
+    padding: 10px 15px; /* Increased padding for better touch target */
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -134,24 +132,24 @@ h2 {
     background-color: #322ffc;
 }
 
-/* my Style Footer */
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px; /* Adjusted padding */
     background-color: #0e473a;
     color: #fff;
 }
 
 .social-icons a {
     color: #fff;
-    font-size: 20px;
+    font-size: 18px; /* Responsive font size */
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #00acee; /* You can adjust colors for each platform if desired */
+    color: #00acee;
 }
 
 .social-icons a.facebook:hover { color: #3b5998; }
@@ -161,7 +159,21 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .course {
-        flex: 1 1 calc(100% - 30px); /* Stack courses on smaller screens */
+    header h1 {
+        font-size: 2rem; /* Further adjust header size */
     }
-}
+    header p {
+        font-size: 1rem; /* Adjust subtitle size */
+    }
+    nav a {
+        margin: 0 10px; /* Adjusted margin for mobile */
+    }
+    h2 {
+        font-size: 1.5rem; /* Responsive font size */
+    }
+    .course {
+        flex: 1 1 calc(100% - 30px); /* Stack courses */
+        margin: 15px 0; /* Adjust margins for better spacing */
+    }
+    }
+    
