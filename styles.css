@@ -34,13 +34,15 @@ header p {
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
-
 /* Navigation Styles */
 nav {
     background: #0a3a2f; /* Darker green to complement the header */
     text-align: center;
     padding: 15px 0;
     border-top: 2px solid #f1c40f; /* Golden accent */
+    display: flex; /* Use flexbox for responsive layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items */
 }
 
 nav a {
@@ -72,6 +74,20 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 10px 0; /* Less padding for mobile */
+    }
+
+    nav a {
+        margin: 10px 0; /* Adjust margin for stacked items */
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
+
 
 /* Main Content Styles */
 main {
