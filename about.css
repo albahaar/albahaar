@@ -1,0 +1,72 @@
+/* General Styles for About Page */
+main {
+    flex: 1; /* Allow main content to expand */
+    padding: 50px; /* Ample padding for layout */
+    background-color: #f4f4f4; /* Light background color */
+    display: flex;
+    justify-content: center; /* Center the content */
+}
+
+.about-section {
+    max-width: 900px; /* Limit width for better readability */
+    background: #fff; /* White background for the section */
+    padding: 40px; /* Ample padding for spacious feel */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    text-align: left; /* Align text to the left */
+}
+
+.about-section h2 {
+    color: #007A8E; /* Dark teal for headings */
+    font-size: 2.5em; /* Large heading */
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.about-content {
+    display: flex; /* Flexbox layout */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.profile-image {
+    flex: 1; /* Image takes 1 part */
+    margin-right: 30px; /* Space between image and text */
+}
+
+.profile-image img {
+    width: 100%; /* Full width for image */
+    border-radius: 10px; /* Rounded corners for image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the image */
+}
+
+.about-text {
+    flex: 2; /* Text takes 2 parts */
+}
+
+.about-text h3 {
+    color: #005A63; /* Darker teal for subheadings */
+    font-size: 1.8em; /* Large subheading */
+    margin-bottom: 15px; /* Space below subheading */
+}
+
+.about-text p {
+    color: #333; /* Dark gray for text */
+    font-size: 1.2em; /* Slightly larger text for readability */
+    line-height: 1.6; /* Comfortable line height */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .profile-image {
+        margin-bottom: 20px; /* Add space below image when stacked */
+    }
+
+    .about-section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+}

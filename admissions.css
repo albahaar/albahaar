@@ -1,0 +1,235 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Islamic Style Header */
+header {
+    background: #0e473a; /* Dark green, symbolic in Islamic cultures */
+    color: #f9f9f9;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 5px solid #f1c40f; /* Golden accent */
+    background-image: url('islamic-pattern.png'); /* You can use a subtle geometric Islamic pattern */
+    background-size: cover;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    color: #f1c40f; /* Golden accent */
+    font-family: 'Amiri', serif; /* A classic Arabic-inspired font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.4rem;
+    color: #e0e0e0; /* Soft white/grey for subtitle */
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+
+/* Islamic Style Navigation */
+nav {
+    background: #0a3a2f; /* Darker green to complement the header */
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #f1c40f; /* Golden accent */
+}
+
+nav a {
+    color: #f9f9f9;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #f1c40f;
+    transition: all 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #004F59;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Course Selection Section */
+.course-selection {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.course-selection h3 {
+    font-size: 2rem;
+    color: #177df3;
+    margin-bottom: 20px;
+}
+
+#course-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #177df3, #007C8C);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(135deg, #007C8C, #004F59);
+}
+
+/* Courses Section */
+.courses {
+    margin-top: 40px;
+}
+
+.courses h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #004F59;
+    margin-bottom: 30px;
+}
+
+/* Course Card Styling */
+.course-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.course-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.course-info h4 {
+    font-size: 1.6rem;
+    color: #004F59;
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.course-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Islamic Style Footer */
+footer {
+    background: #0e473a; /* Dark green matching the header */
+    color: #f9f9f9;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 5px solid #f1c40f; /* Golden accent */
+    position: relative;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .social-icons {
+    margin-top: 15px;
+}
+
+footer .social-icons a {
+    color: #f9f9f9;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem; /* Larger icon size */
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Optional: Add a decorative element at the bottom */
+footer::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #f1c40f; /* Golden accent */
+    position: absolute;
+    bottom: -5px; /* Slightly below the footer */
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+}

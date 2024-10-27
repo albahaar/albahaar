@@ -1,0 +1,63 @@
+/* General Styles for Testimonials Page */
+main {
+    flex: 1; /* Allow main content to expand */
+    padding: 50px; /* Ample padding for layout */
+    background-color: #f4f4f4; /* Light background color */
+    display: flex;
+    justify-content: center; /* Center the content */
+}
+
+.testimonials-section {
+    max-width: 800px; /* Limit width for better readability */
+    margin: auto; /* Center the section */
+    background: #fff; /* White background for testimonials */
+    padding: 40px; /* Ample padding for spacious feel */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    text-align: center; /* Center-align text */
+}
+
+/* Header Styles */
+.testimonials-section h2 {
+    color: #007A8E; /* Dark teal for headings */
+    margin-bottom: 30px; /* Space below heading */
+    font-size: 2.5em; /* Increased font size for prominence */
+}
+
+/* Testimonial Styles */
+.testimonial {
+    margin-bottom: 40px; /* Space between testimonials */
+}
+
+.testimonial .quote {
+    font-style: italic; /* Italicize quotes */
+    color: #555; /* Light gray text for quotes */
+    font-size: 1.2em; /* Slightly larger font for quotes */
+    margin-bottom: 15px; /* Space below the quote */
+    line-height: 1.6; /* Comfortable line height */
+}
+
+.testimonial .author {
+    font-weight: bold; /* Emphasize author names */
+    color: #333; /* Darker text for author names */
+    font-size: 1.1em; /* Slightly larger font for authors */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonials-section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .testimonials-section h2 {
+        font-size: 2em; /* Adjust font size for smaller screens */
+    }
+
+    .testimonial .quote {
+        font-size: 1.1em; /* Adjust quote font size */
+    }
+
+    .testimonial .author {
+        font-size: 1em; /* Adjust author font size */
+    }
+}
