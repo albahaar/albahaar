@@ -43,9 +43,6 @@ nav {
     text-align: center;
     padding: 15px 0;
     border-top: 2px solid #f1c40f; /* Golden accent */
-    display: flex; /* Use flexbox for responsive layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items */
 }
 
 nav a {
@@ -56,7 +53,6 @@ nav a {
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
-    padding: 10px; /* Increased padding for better touch targets */
 }
 
 nav a:hover {
@@ -190,7 +186,6 @@ footer {
     color: #f9f9f9;
     text-align: center;
     padding: 30px 0;
-    border-top: 5px solid #f1c40f; /* Golden accent */
     position: relative;
 }
 
@@ -216,60 +211,14 @@ footer .social-icons a:hover {
     transform: scale(1.2); /* Slightly enlarge on hover */
 }
 
-/* Optional: Add a decorative element at the bottom */
-footer::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background: #f1c40f; /* Golden accent */
-    position: absolute;
-    bottom: -5px; /* Slightly below the footer */
+
+.social-icons {
+    margin-top: 10px;
 }
 
-/* Mobile and Web Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem; /* Adjust header font size for mobile */
-    }
-
-    header p {
-        font-size: 1.2rem; /* Smaller subtitle for mobile */
-    }
-
-    nav {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        padding: 10px 0; /* Less padding for mobile */
-    }
-
-    nav a {
-        margin: 10px 0; /* Adjust margin for stacked items */
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-
-    .intro h2 {
-        font-size: 2rem; /* Smaller intro heading */
-    }
-
-    .intro p {
-        font-size: 1rem; /* Smaller intro paragraph */
-    }
-
-    .course-card {
-        flex-direction: column; /* Stack course cards vertically on mobile */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .course-image {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    footer p {
-        font-size: 0.9rem; /* Smaller footer text for mobile */
-    }
-
-    footer .social-icons a {
-        font-size: 1.2rem; /* Smaller icons for mobile */
-    }
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
 }
