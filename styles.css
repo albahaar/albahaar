@@ -133,18 +133,18 @@ h2 {
 }
 
 .course button {
-    background-color: #322ffc; /* Button background color */
-    color: white; /* Text color */
-    border: none; /* Removed border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 8px 10px; /* Padding for button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition effect for hover */
-    font-size: 1rem; /* Consistent font size */
+    background-color: #322ffc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+/* Removed yellow lining for mobile users */
 .course button:hover {
-    background-color: #2531b3; /* Darker shade on hover */
+    background-color: #2531b3; /* Darker shade on hover for visibility */
 }
 
 /* Footer Styles */
@@ -186,7 +186,7 @@ footer {
     nav a {
         font-size: 0.9rem; /* Smaller font size for mobile */
         padding: 12px 20px; /* Increased padding for touch targets */
-        border: 2px solid #f1c40f; /* Box around navigation links */
+        border: 2px solid transparent; /* No border for mobile */
         border-radius: 8px; /* Rounded edges for boxes */
         display: block; /* Make links block-level for full width */
         width: 90%; /* Make links take up most of the width */
