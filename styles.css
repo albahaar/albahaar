@@ -133,17 +133,18 @@ h2 {
 }
 
 .course button {
-    background-color: #322ffc;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #322ffc; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Removed border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect for hover */
+    font-size: 1rem; /* Consistent font size */
 }
 
 .course button:hover {
-    background-color: #322ffc;
+    background-color: #2531b3; /* Darker shade on hover */
 }
 
 /* Footer Styles */
