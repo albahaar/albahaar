@@ -34,14 +34,16 @@ header p {
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
-/* Header and Navigation Styles */
+/* Header Styles */
 header {
-    position: relative;
     background-color: #0a3a2f;
-    padding: 15px 0;
+    color: #f9f9f9;
     text-align: center;
+    padding: 15px;
+    position: relative;
 }
 
+/* Main Navigation Styles */
 nav {
     background: #0a3a2f;
     text-align: center;
@@ -58,64 +60,47 @@ nav a {
     font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 nav a:hover {
     color: #f1c40f;
 }
 
-nav a::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #f1c40f;
-    transition: all 0.3s ease;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
 /* Hamburger Icon Styles */
 .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
-    margin: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 .hamburger div {
     width: 30px;
     height: 3px;
     background-color: #f9f9f9;
-    transition: 0.3s;
 }
 
-/* Responsive Styles for Navigation */
+/* Responsive Styles for Mobile */
 @media (max-width: 768px) {
     nav {
         display: none; /* Hide nav by default */
         flex-direction: column;
-        align-items: center;
-        position: absolute;
-        top: 100%;
-        left: 0;
         width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
         background: #0a3a2f;
-        border-top: 2px solid #f1c40f;
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Show hamburger icon on smaller screens */
     }
 
     .show {
-        display: flex; /* Show nav when .show class is added */
+        display: flex; /* Show nav when toggled */
     }
 }
 
