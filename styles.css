@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -13,34 +12,27 @@ body {
 header {
     background: #0e473a;
     color: #f9f9f9;
-    padding: 20px 0; /* Reduced padding for better mobile spacing */
+    padding: 30px 0;
     text-align: center;
     border-bottom: 5px solid #f1c40f;
     background-image: url('islamic-pattern.png');
     background-size: cover;
+    position: relative;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem; /* Responsive font size */
+    font-size: 3rem;
     color: #f1c40f;
     font-family: 'Amiri', serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 1.2rem; /* Responsive font size */
+    font-size: 1.4rem;
     color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
-}
-/* Header Styles */
-header {
-    background-color: #0a3a2f;
-    color: #f9f9f9;
-    text-align: center;
-    padding: 15px;
-    position: relative;
 }
 
 /* Main Navigation Styles */
@@ -49,66 +41,94 @@ nav {
     text-align: center;
     padding: 15px 0;
     border-top: 2px solid #f1c40f;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 nav a {
     color: #f9f9f9;
     text-decoration: none;
+    margin: 0 20px;
     font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 nav a:hover {
     color: #f1c40f;
 }
 
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #f1c40f;
+    transition: all 0.3s ease;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
 /* Hamburger Icon Styles */
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
     cursor: pointer;
+    gap: 5px;
+    margin: 10px;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
 }
 
 .hamburger div {
     width: 30px;
     height: 3px;
     background-color: #f9f9f9;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Responsive Styles for Mobile */
+.hamburger.active div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Navigation */
 @media (max-width: 768px) {
     nav {
-        display: none; /* Hide nav by default */
+        display: none;
         flex-direction: column;
-        width: 100%;
         position: absolute;
-        top: 60px;
-        left: 0;
-        background: #0a3a2f;
+        top: 70px;
+        width: 100%;
+        background-color: #0a3a2f;
+        padding: 20px 0;
+        z-index: 9;
+    }
+
+    nav.show {
+        display: flex;
     }
 
     .hamburger {
-        display: flex; /* Show hamburger icon on smaller screens */
-    }
-
-    .show {
-        display: flex; /* Show nav when toggled */
+        display: flex;
     }
 }
 
-
-
-/* Main Content Styles */
+/* Main Content */
 main {
-    padding: 20px; /* Reduced padding for mobile */
+    padding: 30px;
     max-width: 1200px;
     margin: 20px auto;
     background: white;
@@ -121,7 +141,7 @@ h2 {
     color: #0a3a2f;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 1.8rem; /* Responsive font size */
+    font-size: 2rem;
 }
 
 .course-list {
@@ -135,7 +155,7 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 15px;
-    padding: 15px; /* Reduced padding for mobile */
+    padding: 20px;
     flex: 1 1 calc(30% - 30px);
     transition: transform 0.3s;
 }
@@ -158,7 +178,7 @@ h2 {
     color: white;
     border: none;
     border-radius: 4px;
-    padding: 10px 15px; /* Increased padding for better touch target */
+    padding: 8px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -170,14 +190,14 @@ h2 {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 15px; /* Adjusted padding */
+    padding: 20px;
     background-color: #0e473a;
     color: #fff;
 }
 
 .social-icons a {
     color: #fff;
-    font-size: 18px; /* Responsive font size */
+    font-size: 20px;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -194,21 +214,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem; /* Further adjust header size */
-    }
-    header p {
-        font-size: 1rem; /* Adjust subtitle size */
-    }
-    nav a {
-        margin: 0 10px; /* Adjusted margin for mobile */
-    }
-    h2 {
-        font-size: 1.5rem; /* Responsive font size */
-    }
     .course {
-        flex: 1 1 calc(100% - 30px); /* Stack courses */
-        margin: 15px 0; /* Adjust margins for better spacing */
+        flex: 1 1 calc(100% - 30px);
     }
-    }
-    
+}
