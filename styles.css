@@ -43,6 +43,13 @@ nav {
     border-top: 2px solid #f1c40f;
 }
 
+nav ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flex for horizontal alignment on desktop */
+}
+
 nav a {
     color: #f9f9f9;
     text-decoration: none;
@@ -74,7 +81,7 @@ nav a:hover::before {
 
 /* Hamburger Icon Styles */
 .hamburger {
-    display: none;
+    display: none; /* Initially hidden, shown in mobile */
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
@@ -92,6 +99,7 @@ nav a:hover::before {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Active Hamburger Animation */
 .hamburger.active div:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -104,13 +112,13 @@ nav a:hover::before {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Responsive Navigation */
+/* Responsive Navigation for Mobile */
 @media (max-width: 768px) {
     nav {
-        display: none;
-        flex-direction: column;
+        display: none; /* Hide nav by default */
+        flex-direction: column; /* Stack vertically */
         position: absolute;
-        top: 70px;
+        top: 70px; /* Adjust according to header height */
         width: 100%;
         background-color: #0a3a2f;
         padding: 20px 0;
@@ -118,11 +126,20 @@ nav a:hover::before {
     }
 
     nav.show {
-        display: flex;
+        display: flex; /* Show nav when toggled */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align links */
+    }
+
+    nav a {
+        margin: 10px 0; /* Space between links in mobile */
     }
 
     .hamburger {
-        display: flex;
+        display: flex; /* Show hamburger on mobile */
     }
 }
 
@@ -156,7 +173,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 15px;
     padding: 20px;
-    flex: 1 1 calc(30% - 30px);
+    flex: 1 1 calc(30% - 30px); /* Responsive item */
     transition: transform 0.3s;
 }
 
@@ -215,6 +232,6 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .course {
-        flex: 1 1 calc(100% - 30px);
+        flex: 1 1 calc(100% - 30px); /* Stack courses on smaller screens */
     }
 }
