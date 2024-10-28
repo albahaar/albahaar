@@ -35,18 +35,19 @@ header p {
     margin-top: 10px;
 }
 
-/* Navigation Styles */
+/* Main Navigation Styles */
 nav {
     background: #0a3a2f;
     text-align: center;
-    padding: 10px 0; /* Adjusted padding */
+    padding: 15px 0;
+    border-top: 2px solid #f1c40f;
 }
 
 nav a {
     color: #f9f9f9;
     text-decoration: none;
-    margin: 0 15px; /* Adjusted margin */
-    font-size: 1rem; /* Responsive font size */
+    margin: 0 20px;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
     position: relative;
@@ -70,6 +71,40 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+/* Hamburger Icon Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin: 10px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .show {
+        display: flex;
+    }
+}
+
 
 /* Main Content Styles */
 main {
