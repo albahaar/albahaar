@@ -34,19 +34,27 @@ header p {
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
+/* Header and Navigation Styles */
+header {
+    position: relative;
+    background-color: #0a3a2f;
+    padding: 15px 0;
+    text-align: center;
+}
 
-/* Main Navigation Styles */
 nav {
     background: #0a3a2f;
     text-align: center;
     padding: 15px 0;
     border-top: 2px solid #f1c40f;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
     color: #f9f9f9;
     text-decoration: none;
-    margin: 0 20px;
     font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -88,12 +96,18 @@ nav a:hover::before {
     transition: 0.3s;
 }
 
-/* Responsive Navigation */
+/* Responsive Styles for Navigation */
 @media (max-width: 768px) {
     nav {
-        display: none;
+        display: none; /* Hide nav by default */
         flex-direction: column;
         align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0a3a2f;
+        border-top: 2px solid #f1c40f;
     }
 
     .hamburger {
@@ -101,9 +115,10 @@ nav a:hover::before {
     }
 
     .show {
-        display: flex;
+        display: flex; /* Show nav when .show class is added */
     }
 }
+
 
 
 /* Main Content Styles */
