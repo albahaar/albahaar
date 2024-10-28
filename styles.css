@@ -39,7 +39,7 @@ header p {
 nav {
     background: #0a3a2f;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0; /* Reduced padding for mobile */
     border-top: 2px solid #f1c40f;
 }
 
@@ -48,10 +48,11 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex; /* Flex for horizontal alignment on desktop */
+    flex-wrap: wrap; /* Allow wrapping for mobile */
 }
 
 nav li {
-    margin: 0 20px; /* Add margin for spacing between links */
+    margin: 0 15px; /* Reduced margin for spacing between links */
 }
 
 nav a {
@@ -60,11 +61,13 @@ nav a {
     font-size: 1.2rem;
     font-weight: 600;
     transition: color 0.3s ease;
-    position: relative;
+    padding: 10px 15px; /* Added padding for better touch targets */
+    border-radius: 5px; /* Rounded edges for links */
 }
 
 nav a:hover {
     color: #f1c40f;
+    background-color: rgba(241, 196, 15, 0.2); /* Subtle background on hover */
 }
 
 nav a::before {
@@ -177,6 +180,12 @@ footer {
 
     nav li {
         margin: 10px 0; /* Space between links */
+    }
+
+    nav a {
+        width: 100%; /* Make links full width for better touch targets */
+        text-align: center; /* Center text */
+        padding: 12px 0; /* More padding for touch friendliness */
     }
 
     .course {
